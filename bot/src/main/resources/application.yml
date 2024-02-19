@@ -1,5 +1,6 @@
 app:
   telegram-token: unset
+  name: unset
 
 spring:
   application:
