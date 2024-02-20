@@ -2,6 +2,7 @@ package edu.java.bot.commands.handlers;
 
 import edu.java.bot.commands.Command;
 import edu.java.bot.commands.impl.HelpCommand;
+import edu.java.bot.commands.impl.ListCommand;
 import edu.java.bot.commands.impl.StartCommand;
 import edu.java.bot.commands.impl.TrackCommand;
 import edu.java.bot.commands.impl.UntrackedCommand;
@@ -24,13 +25,15 @@ public class CommandHandler {
         StartCommand startCommand,
         HelpCommand helpCommand,
         TrackCommand trackCommand,
-        UntrackedCommand untrackedCommand
+        UntrackedCommand untrackedCommand,
+        ListCommand listCommand
     ) {
             this.commandsMap = Map.of(
                 CommandsInfo.START.getValue(), startCommand,
                 CommandsInfo.HELP.getValue(), helpCommand,
                 CommandsInfo.TRACK.getValue(), trackCommand,
-                CommandsInfo.UNTRACKED.getValue(), untrackedCommand
+                CommandsInfo.UNTRACKED.getValue(), untrackedCommand,
+                CommandsInfo.LIST.getValue(), listCommand
             );
     }
 

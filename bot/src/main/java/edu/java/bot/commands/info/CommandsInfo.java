@@ -7,7 +7,8 @@ import lombok.Getter;
     START("/start", "Старт работы бота"),
     HELP("/help", "Вывод информации о всех доступных командах"),
     TRACK("/track", "Включает отслеживание отправленной ссылки"),
-    UNTRACKED("/untracked", "Снимает ссылку с отслеживания");
+    UNTRACKED("/untracked", "Снимает ссылку с отслеживания"),
+    LIST("/list", "Выводит список отслеживаемых ссылок");
 
     final String value;
     final String description;

@@ -47,6 +47,7 @@ public class DevGuardianBot extends TelegramLongPollingBot {
                 logger.info("Была считана команда" + currentInfo);
                 sendMessage(commandHandler.handleCommand(update));
             } else {
+                logger.info("Было считано необрабатываемое сообщение");
                 message.setChatId(update.getMessage().getChatId());
                 message.setText(SupportingInfo.UNKNOWN_MESSAGE.getDescription());
                 sendMessage(message);
