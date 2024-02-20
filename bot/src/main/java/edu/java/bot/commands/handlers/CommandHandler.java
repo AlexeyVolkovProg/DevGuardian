@@ -26,13 +26,16 @@ public class CommandHandler {
         TrackCommand trackCommand,
         UntrackedCommand untrackedCommand
     ) {
-        this.commandsMap = Map.of(
-            CommandsInfo.START.getValue(), startCommand,
-            CommandsInfo.HELP.getValue(), helpCommand,
-            CommandsInfo.TRACK.getValue(), trackCommand,
-            CommandsInfo.UNTRACKED.getValue(), untrackedCommand
-        );
+            this.commandsMap = Map.of(
+                CommandsInfo.START.getValue(), startCommand,
+                CommandsInfo.HELP.getValue(), helpCommand,
+                CommandsInfo.TRACK.getValue(), trackCommand,
+                CommandsInfo.UNTRACKED.getValue(), untrackedCommand
+            );
     }
+
+
+
 
     /**
      * Обработка пришедшей команды
@@ -40,12 +43,12 @@ public class CommandHandler {
     public SendMessage handleCommand(Update update) {
         String info = update.getMessage().getText();
         List<String> commandInfo = List.of(info.split(" "));
-        String commandName = commandInfo.get(0);
-        String commandArgs = commandInfo.get(1);
+        String commandName = commandInfo.getFirst();
         long chatId = update.getMessage().getChatId();
 
         Command commandIdentification = commandsMap.get(commandName);
         if (commandIdentification != null){
+            System.out.println("Обработка команды");
             return commandIdentification.execute(update);
         }else {
             return new SendMessage(String.valueOf(chatId), SupportingInfo.UNKNOWN_COMMAND.getDescription());

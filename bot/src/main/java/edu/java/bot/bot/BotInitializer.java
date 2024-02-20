@@ -10,10 +10,10 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 @Component
+
 public class BotInitializer {
 
     private static final Logger LOGGER = LogManager.getLogger(BotInitializer.class);
-
     private final DevGuardianBot devGuardianBot;
 
     @Autowired

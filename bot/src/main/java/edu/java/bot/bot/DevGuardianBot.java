@@ -45,7 +45,7 @@ public class DevGuardianBot extends TelegramLongPollingBot {
             String currentInfo = update.getMessage().getText();
             if (currentInfo.startsWith("/")) {
                 logger.info("Была считана команда" + currentInfo);
-                commandHandler.handleCommand(update);
+                sendMessage(commandHandler.handleCommand(update));
             } else {
                 message.setChatId(update.getMessage().getChatId());
                 message.setText(SupportingInfo.UNKNOWN_MESSAGE.getDescription());
