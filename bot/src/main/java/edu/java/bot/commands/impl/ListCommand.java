@@ -14,6 +14,6 @@ public class ListCommand implements Command {
     @Override
     public SendMessage execute(Update update) {
         Long chatId = update.getMessage().getChatId();
-        return SendMessage.builder().chatId(String.valueOf(chatId)).text("Команда находится в разработке").build();
+        return SendMessage.builder().chatId(String.valueOf(chatId)).text("Команда находится в разработке").build(); // // реализация появится, когда напишем HttpClient для общения(ДЗ2)
     }
 }

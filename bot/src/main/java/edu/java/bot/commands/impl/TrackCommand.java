@@ -15,7 +15,7 @@ public class TrackCommand implements Command {
         long chatId = update.getMessage().getChatId();
         return SendMessage.builder()
             .chatId(String.valueOf(chatId))
-            .text("Команда будет реализована позже")
+            .text("Команда будет реализована позже") // реализация появится, когда напишем HttpClient для общения(ДЗ2)
             .build();
     }
 }
