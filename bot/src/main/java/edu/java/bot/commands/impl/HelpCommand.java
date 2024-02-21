@@ -2,7 +2,6 @@ package edu.java.bot.commands.impl;
 
 import edu.java.bot.commands.Command;
 import edu.java.bot.commands.info.CommandsInfo;
-import jakarta.activation.CommandInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;

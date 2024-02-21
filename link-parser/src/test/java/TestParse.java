@@ -1,15 +1,13 @@
-package edu.java.linkparser;
-
+import edu.java.linkparser.GitHubParser;
+import edu.java.linkparser.ParseService;
+import edu.java.linkparser.StackOverflowParser;
 import edu.java.linkparser.response.GitHubResponse;
 import edu.java.linkparser.response.ParsingResponse;
 import edu.java.linkparser.response.StackOverflowResponse;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/**
- * Unit test for simple App.
- */
-public class ParsersTests {
+public class TestParse {
     private ParseService createLinkParsers() {
         return new ParseService(new GitHubParser(), new StackOverflowParser());
     }
@@ -35,5 +33,4 @@ public class ParsersTests {
         assertEquals(new StackOverflowResponse("5562936"), parsingResult1);
         assertEquals(new StackOverflowResponse("40538736"), parsingResult2);
     }
-
 }

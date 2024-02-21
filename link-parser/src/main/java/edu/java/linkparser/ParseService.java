@@ -7,7 +7,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 public class ParseService {
-
     GitHubParser gitHubParser;
     StackOverflowParser stackOverflowParser;
 
