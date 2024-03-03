@@ -6,6 +6,8 @@ import edu.java.client.stackoverflow.dto.ListRelatedQuestionsResponse;
 
 public interface StackOverFlowClient {
     ListAnswerResponse fetchAnswerEvents(String questionId);
+
     ListCommentsResponse fetchCommentEvents(String questionId);
+
     ListRelatedQuestionsResponse fetchRelatedQuestionEvent(String questionId);
 }

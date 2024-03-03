@@ -3,10 +3,10 @@ package edu.java.client.github.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import lombok.Getter;
-import lombok.Setter;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Getter;
+import lombok.Setter;
 
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

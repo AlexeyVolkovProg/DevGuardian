@@ -12,9 +12,9 @@ public class ListCommentsResponse {
         @JsonProperty("owner") UserInformationResponse owner,
         @JsonProperty("comment_id") long id,
         @JsonProperty("score") int score,
-        @JsonProperty("creation_date")OffsetDateTime creationDate,
+        @JsonProperty("creation_date") OffsetDateTime creationDate,
         @JsonProperty("body") String body
-        ){
+    ) {
 
     }
 }

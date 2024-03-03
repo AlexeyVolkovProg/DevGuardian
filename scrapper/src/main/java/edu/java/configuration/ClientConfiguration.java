@@ -15,6 +15,7 @@ import org.springframework.web.reactive.function.client.support.WebClientAdapter
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
 @Configuration
+@SuppressWarnings("MagicNumber")
 public class ClientConfiguration {
 
     //todo билд WebClient, возможно нуждается в доработке
@@ -35,7 +36,7 @@ public class ClientConfiguration {
         return clientFactory.createClient(clientClass);
     }
 
-    private GitHubRepositoryService gitHubRepositoryService(){
+    private GitHubRepositoryService gitHubRepositoryService() {
         return buildClient(
             GitHubRepositoryService.class,
             GitHubConfiguration.API_BASE_URL,
@@ -43,21 +44,25 @@ public class ClientConfiguration {
             GitHubConfiguration.API_VERSION_SPEC
         );
     }
+
     private StackOverFlowService stackOverFlowRepositoryService() {
         return buildClient(
             StackOverFlowService.class,
             StackOverFlowConfiguration.API_BASE_URL,
             StackOverFlowConfiguration.JSON_CONTENT_TYPE,
-            StackOverFlowConfiguration.API_VERSION_SPEC);
+            StackOverFlowConfiguration.API_VERSION_SPEC
+        );
     }
 
     @Bean
     public GitHubClient githubClient() {
-        return new GitHubClientImpl(gitHubRepositoryService()); }
+        return new GitHubClientImpl(gitHubRepositoryService());
+    }
 
     @Bean
     public StackOverFlowClient stackOverFlowClient() {
-        return new StackOverFlowClientImpl(stackOverFlowRepositoryService()); }
+        return new StackOverFlowClientImpl(stackOverFlowRepositoryService());
+    }
 }
 
 
