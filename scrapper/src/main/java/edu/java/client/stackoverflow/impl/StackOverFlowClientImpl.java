@@ -6,6 +6,7 @@ import edu.java.client.stackoverflow.dto.ListAnswerResponse;
 import edu.java.client.stackoverflow.dto.ListCommentsResponse;
 import edu.java.client.stackoverflow.dto.ListRelatedQuestionsResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 public class StackOverFlowClientImpl implements StackOverFlowClient {

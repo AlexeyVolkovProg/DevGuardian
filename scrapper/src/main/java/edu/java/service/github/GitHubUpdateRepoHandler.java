@@ -1,4 +1,4 @@
-package edu.java.service;
+package edu.java.service.github;
 
 import edu.java.client.github.GitHubClient;
 import edu.java.client.github.dto.CommitCommentEventResponse;

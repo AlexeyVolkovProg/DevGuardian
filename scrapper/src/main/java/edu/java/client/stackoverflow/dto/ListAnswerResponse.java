@@ -1,13 +1,16 @@
 package edu.java.client.stackoverflow.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
 import java.time.OffsetDateTime;
 import java.util.List;
 
+@Getter
 public class ListAnswerResponse {
     @JsonProperty("items")
     private List<AnswerEventResponse> answers;
 
+    @Getter
     public record AnswerEventResponse(
         @JsonProperty("owner") UserInformationResponse owner,
         @JsonProperty("answer_id") long answerId,
