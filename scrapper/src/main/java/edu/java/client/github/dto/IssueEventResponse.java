@@ -15,6 +15,7 @@ public class IssueEventResponse extends EventResponse {
     @JsonProperty("payload")
     private EventPayload payload;
 
+    @Getter
     public static class EventPayload implements Serializable{
         @JsonProperty("action")
         private String action;

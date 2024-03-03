@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import java.io.Serializable;
 
+@Getter
 public class CreateEventsResponse extends EventResponse{
 
     @JsonProperty("payload")
