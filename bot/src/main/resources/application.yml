@@ -1,5 +1,6 @@
 app:
-  telegram-token: unset
+  telegram-token: "6984277870:AAFUguTgoql34cYfUAejgxLVGSozoFWXkjo"
+  name: "dev_guardian_bot"
 
 spring:
   application:
