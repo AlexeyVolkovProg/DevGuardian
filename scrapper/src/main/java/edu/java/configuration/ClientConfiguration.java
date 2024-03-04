@@ -9,7 +9,6 @@ import edu.java.client.stackoverflow.impl.StackOverFlowClientImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
-import org.springframework.web.reactive.function.client.ExchangeStrategies;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.support.WebClientAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
@@ -24,12 +23,6 @@ public class ClientConfiguration {
             .baseUrl(apiUrl)
             .defaultHeader(HttpHeaders.CONTENT_TYPE, contentType)
             .defaultHeader(HttpHeaders.ACCEPT, apiVersion)
-            .exchangeStrategies(ExchangeStrategies
-                .builder()
-                .codecs(codecs -> codecs
-                    .defaultCodecs()
-                    .maxInMemorySize(500 * 1024 * 1024))
-                .build())
             .build();
         HttpServiceProxyFactory clientFactory =
             HttpServiceProxyFactory.builderFor(WebClientAdapter.create(webClient)).build();
