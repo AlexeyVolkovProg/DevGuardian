@@ -1,5 +1,5 @@
 app:
-  telegram-token: "6984277870:AAFUguTgoql34cYfUAejgxLVGSozoFWXkjo"
+  telegram-token: "6984277870:AAG8DjDL0iqlfHqOb7RbaGFzPKU4uxlp2Cg"
   name: "dev_guardian_bot"
 
 spring:
